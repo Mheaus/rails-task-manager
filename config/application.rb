@@ -29,3 +29,4 @@ module RailsTaskManager
     config.generators.system_tests = nil
   end
 end
+

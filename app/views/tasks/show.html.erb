@@ -1,0 +1,11 @@
+<div class="container" >
+  <div class="show-content-area">
+    <div class="row show-content" >
+      <h1><%= @task.name.capitalize %></h1>
+      <p> <%= @task.description.capitalize %> </p>
+    </div>
+  </div>
+  <div class="text-right">
+    <%= link_to "Back to index", tasks_path %>
+  </div>
+</div>

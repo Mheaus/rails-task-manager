@@ -1,0 +1,23 @@
+
+<div class="container">
+  <div class="row">
+    <h1 class="index-title">All your Tasks in one page</h1>
+  </div>
+
+  <div class="row">
+    <h5><%= link_to 'CREATE NEW TASK', new_task_path %></h5>
+  </div>
+
+  <% @tasks.each do |task| %>
+    <div class="row">
+      <blockquote>
+        <h1>
+          <%= link_to task.name.capitalize, task_path(task), style: "text-decoration: none;" %>
+          <%= link_to '(edit)', edit_task_path(task), style: "text-decoration: none; color: #69464B; font-size: 18px;" %>
+        </h1>
+        <p> <%= task.description.capitalize.first(200) + "..." %> </p>
+        <footer> <%= link_to '(delete)', task_path(task), method: :delete %> </footer>
+      </blockquote>
+    </div>
+  <% end %>
+</div>
